@@ -1,0 +1,14 @@
+C:\Users\24821893\OneDrive - MMU\Uni Setup\Level_6\Programming Languages and Paradigms\Serpent's Labyrinth\obj\Debug\net10.0\Serpent's Labyrinth.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\24821893\OneDrive - MMU\Uni Setup\Level_6\Programming Languages and Paradigms\Serpent's Labyrinth\obj\Debug\net10.0\Serpent's Labyrinth.AssemblyInfoInputs.cache
+C:\Users\24821893\OneDrive - MMU\Uni Setup\Level_6\Programming Languages and Paradigms\Serpent's Labyrinth\obj\Debug\net10.0\Serpent's Labyrinth.AssemblyInfo.cs
+C:\Users\24821893\OneDrive - MMU\Uni Setup\Level_6\Programming Languages and Paradigms\Serpent's Labyrinth\obj\Debug\net10.0\Serpent's Labyrinth.csproj.CoreCompileInputs.cache
+C:\Users\24821893\OneDrive - MMU\Uni Setup\Level_6\Programming Languages and Paradigms\Serpent's Labyrinth\bin\Debug\net10.0\Serpent's Labyrinth.exe
+C:\Users\24821893\OneDrive - MMU\Uni Setup\Level_6\Programming Languages and Paradigms\Serpent's Labyrinth\bin\Debug\net10.0\Serpent's Labyrinth.deps.json
+C:\Users\24821893\OneDrive - MMU\Uni Setup\Level_6\Programming Languages and Paradigms\Serpent's Labyrinth\bin\Debug\net10.0\Serpent's Labyrinth.runtimeconfig.json
+C:\Users\24821893\OneDrive - MMU\Uni Setup\Level_6\Programming Languages and Paradigms\Serpent's Labyrinth\bin\Debug\net10.0\Serpent's Labyrinth.dll
+C:\Users\24821893\OneDrive - MMU\Uni Setup\Level_6\Programming Languages and Paradigms\Serpent's Labyrinth\bin\Debug\net10.0\Serpent's Labyrinth.pdb
+C:\Users\24821893\OneDrive - MMU\Uni Setup\Level_6\Programming Languages and Paradigms\Serpent's Labyrinth\obj\Debug\net10.0\Serpent's Labyrinth.dll
+C:\Users\24821893\OneDrive - MMU\Uni Setup\Level_6\Programming Languages and Paradigms\Serpent's Labyrinth\obj\Debug\net10.0\refint\Serpent's Labyrinth.dll
+C:\Users\24821893\OneDrive - MMU\Uni Setup\Level_6\Programming Languages and Paradigms\Serpent's Labyrinth\obj\Debug\net10.0\Serpent's Labyrinth.pdb
+C:\Users\24821893\OneDrive - MMU\Uni Setup\Level_6\Programming Languages and Paradigms\Serpent's Labyrinth\obj\Debug\net10.0\Serpent's Labyrinth.genruntimeconfig.cache
+C:\Users\24821893\OneDrive - MMU\Uni Setup\Level_6\Programming Languages and Paradigms\Serpent's Labyrinth\obj\Debug\net10.0\ref\Serpent's Labyrinth.dll

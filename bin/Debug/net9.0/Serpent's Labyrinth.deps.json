@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Serpent's Labyrinth/1.0.0": {
+        "runtime": {
+          "Serpent's Labyrinth.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Serpent's Labyrinth/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
