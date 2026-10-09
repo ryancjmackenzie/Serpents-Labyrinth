@@ -1,19 +1,49 @@
-using System;
+
 using System.Collections.Generic;
 
-public class Player
+namespace SerpentsLabyrinth
 {
-    public string Name { get; private set; }
-    public int Score { get; private set; }
-
-    public Player(string name)
+    public class Player
     {
-        Name = name;
-        Score = 0;
-    }
+        public string Name { get; }
+        public int Position { get; private set; }
+        public System.ConsoleColor Colour { get; }
 
-    public void AddScore(int points)
-    {
-        Score += points;
+        private readonly List<Ability> abilities =
+            new List<Ability>();
+
+        public Player(string name, System.ConsoleColor colour)
+        {
+            Name = name;
+            Colour = colour;
+            Position = 0;
+        }
+
+        public void SetPosition(int position)
+        {
+            Position = position;
+        }
+
+        public void AddAbility(Ability ability)
+        {
+            abilities.Add(ability);
+        }
+
+        public bool RemoveAbility(Ability ability)
+        {
+            return abilities.Remove(ability);
+        }
+
+        public List<Ability> GetAbilities()
+        {
+            return new List<Ability>(abilities);
+        }
+
+        public string GetToken()
+        {
+            return Name.Length > 0
+                ? Name.Substring(0, 1).ToUpper()
+                : "?";
+        }
     }
 }
