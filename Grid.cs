@@ -215,8 +215,6 @@ namespace SerpentsLabyrinth
 
             Console.WriteLine();
 
-            // X-axis labels: six characters per column,
-
             // X-axis labels centred underneath each cell.
             Console.Write("      ");
 
@@ -299,6 +297,138 @@ namespace SerpentsLabyrinth
             Console.Write($"{label,4} ");
             Console.ResetColor();
             Console.Write("|");
+        }
+        
+        public bool ApplyPiece(int position, out int newPosition)
+        {
+            newPosition = position;
+
+            Cell? cell = GetCell(position);
+
+            if (cell == null || cell.Piece == null)
+                return false;
+
+            // Only activate the piece at its starting end.
+            if (!cell.IsPieceStart)
+                return false;
+
+            Piece piece = cell.Piece;
+            newPosition = piece.Apply();
+
+            return true;
+        }
+
+        
+        public bool MoveRandomPiece()
+        {
+            if (pieces.Count == 0)
+                return false;
+
+            int minimumLength = gridSize;
+            int minimumSpacing = gridSize;
+
+            for (int attempt = 0; attempt < 500; attempt++)
+            {
+                Piece piece = pieces[random.Next(pieces.Count)];
+
+                int first = random.Next(2, FinishPosition);
+                int second = random.Next(2, FinishPosition);
+
+                if (Math.Abs(first - second) < minimumLength)
+                    continue;
+
+                int newStart = piece is Snake
+                    ? Math.Max(first, second)
+                    : Math.Min(first, second);
+
+                int newEnd = piece is Snake
+                    ? Math.Min(first, second)
+                    : Math.Max(first, second);
+
+                Cell firstCell = cells[first - 1];
+                Cell secondCell = cells[second - 1];
+
+                if ((firstCell.Piece != null && firstCell.Piece != piece) ||
+                    (secondCell.Piece != null && secondCell.Piece != piece))
+                    continue;
+
+                if (firstCell.Ability != null || secondCell.Ability != null)
+                    continue;
+
+                bool tooClose = false;
+
+                foreach (Piece existing in pieces)
+                {
+                    if (existing == piece)
+                        continue;
+
+                    if (Math.Abs(existing.StartPosition - newStart) < minimumSpacing)
+                    {
+                        tooClose = true;
+                        break;
+                    }
+                }
+
+                if (tooClose)
+                    continue;
+
+                int oldStart = piece.StartPosition;
+                int oldEnd = piece.EndPosition;
+
+                cells[oldStart - 1].Piece = null;
+                cells[oldStart - 1].IsPieceStart = false;
+
+                cells[oldEnd - 1].Piece = null;
+                cells[oldEnd - 1].IsPieceStart = false;
+
+                piece.Move(newStart, newEnd);
+
+                cells[newStart - 1].Piece = piece;
+                cells[newStart - 1].IsPieceStart = true;
+
+                cells[newEnd - 1].Piece = piece;
+                cells[newEnd - 1].IsPieceStart = false;
+
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool ResizeBoard(int newSize)
+        {
+            if (newSize < 7 || newSize > 14 || newSize == gridSize)
+                return false;
+
+            List<Cell> oldCells = new List<Cell>(cells);
+            int newFinish = newSize * newSize;
+
+            // Remove pieces that no longer fit on the board.
+            pieces.RemoveAll(piece =>
+                piece.StartPosition > newFinish ||
+                piece.EndPosition > newFinish);
+
+            gridSize = newSize;
+            CreateCells();
+
+            // Preserve existing objects in cells that still exist.
+            int cellsToCopy = Math.Min(oldCells.Count, cells.Count);
+
+            for (int i = 0; i < cellsToCopy; i++)
+            {
+                Cell oldCell = oldCells[i];
+                Cell newCell = cells[i];
+
+                if (oldCell.Piece != null && pieces.Contains(oldCell.Piece))
+                {
+                    newCell.Piece = oldCell.Piece;
+                    newCell.IsPieceStart = oldCell.IsPieceStart;
+                }
+
+                newCell.Ability = oldCell.Ability;
+            }
+
+            return true;
         }
     }
 }

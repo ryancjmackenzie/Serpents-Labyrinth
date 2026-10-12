@@ -12,6 +12,8 @@ namespace SerpentsLabyrinth
         private readonly List<Ability> abilities =
             new List<Ability>();
 
+        public List<Ability> Abilities => abilities;
+
         public Player(string name, System.ConsoleColor colour)
         {
             Name = name;
