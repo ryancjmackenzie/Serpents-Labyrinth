@@ -1,4 +1,3 @@
-
 namespace SerpentsLabyrinth
 {
     public enum AbilityType

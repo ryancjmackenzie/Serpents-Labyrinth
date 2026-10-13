@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Serpent\'s Labyrinth")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a080333a0864b1601c626c4810dabc97f6345837")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d8ce24b5f0f5d3d3ccc49706fcc2330838d0374")]
 [assembly: System.Reflection.AssemblyProductAttribute("Serpent\'s Labyrinth")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Serpent\'s Labyrinth")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

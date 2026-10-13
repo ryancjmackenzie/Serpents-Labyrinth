@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 namespace SerpentsLabyrinth
 {
@@ -232,29 +231,21 @@ namespace SerpentsLabyrinth
         {
             while (true)
             {
-                Console.WriteLine("Choose your board size:");
-                Console.WriteLine("1. 7 x 7");
-                Console.WriteLine("2. 8 x 8");
-                Console.WriteLine("3. 9 x 9");
-                Console.WriteLine("4. 10 x 10");
-                Console.WriteLine("5. 11 x 11");
-                Console.WriteLine("6. 12 x 12");
-                Console.WriteLine("7. 13 x 13");
-                Console.WriteLine("8. 14 x 14");
+                Console.WriteLine("Choose your starting board size:");
+                Console.WriteLine("1. 9 x 9");
+                Console.WriteLine("2. 10 x 10");
+                Console.WriteLine("3. 11 x 11");
+                Console.WriteLine("4. 12 x 12");
                 Console.Write("Selection: ");
 
                 string? input = Console.ReadLine();
 
                 switch (input)
                 {
-                    case "1": return 7;
-                    case "2": return 8;
-                    case "3": return 9;
-                    case "4": return 10;
-                    case "5": return 11;
-                    case "6": return 12;
-                    case "7": return 13;
-                    case "8": return 14;
+                    case "1": return 9;
+                    case "2": return 10;
+                    case "3": return 11;
+                    case "4": return 12;
 
                     default:
                         Console.WriteLine("Invalid selection. Try again.");
